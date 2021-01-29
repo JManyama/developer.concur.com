@@ -11,25 +11,25 @@ This callout differs from the inbound SAP Concur web services in the following w
 * The client Expense administrator must configure a list (most commonly a connected list), and SAP Concur must perform database configuration on the list before this service can be used.
 
 ### Contents
-* [Process Flow](#process-flow)
-* [Products and Editions](#products-editions)
-* [Product Restrictions](#product-restrictions)
-* [Fetch List Process Overview](#fetch-list-process-overview)
-* [Security](#security)
-* [Authentication](#authentication)
-* [Functions](#functions)
+* [Process Flow](#fetch-list-callout-process-flow)
+* [Products and Editions](#fetch-list-callout-products-editions)
+* [Product Restrictions](#fetch-list-callout-product-restrictions)
+* [Fetch List Process Overview](#fetch-list-callout-process-overview)
+* [Security](#fetch-list-callout-security)
+* [Authentication](#fetch-list-callout-authentication)
+* [Functions](#fetch-list-callout-functions)
 * [Concur Expense Configuration](#concur-expense-config)
-* [Responses and Errors](#responses-errors)
+* [Responses and Errors](#fetch-list-callout-responses-errors)
 
-#### <a name="process-flow"></a>Process Flow
+#### <a name="process-flow"></a>Fetch List Callout - Process Flow
 
 ![A process flow diagram showing flow between SAP Concur, an application connector, and client's data source](./images/fetch-list-item.png)
 
-#### <a name="products-editions"></a>Products and Editions
+#### <a name="products-editions"></a>Fetch List Callout -Products and Editions
 * Concur Expense Professional Edition
 * The SAP Concur Mobile App
 
-#### <a name="product-restrictions"></a>Product Restrictions
+#### <a name="product-restrictions"></a>Fetch List Callout -Product Restrictions
 SAP Concur products are highly configurable, and not all clients will have access to all features.
 
 Partner developers must determine which configurations are required for their solution prior to the review process.
@@ -37,7 +37,7 @@ Partner developers must determine which configurations are required for their so
 Existing clients can work with Concur Advantage Technical Services to create custom applications that work with their configuration.
 
 
-#### <a name="fetch-list-process-overview"></a>Fetch List Process Overview
+#### <a name="fetch-list-process-overview"></a>Fetch List Callout -Process Overview
 The configuration process has the following steps:
 
 1. Third-party developer, client or SAP Concur downloads, installs, configures, and customizes the application connector.  
@@ -54,17 +54,17 @@ Once the configuration is complete, the callout uses the following process:
 4. Expense displays the list items in a drop down list.
 5. The user selects the desired list item and saves the expense.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Fetch List Callout - Security
 SAP Concur will make calls to the application connector's endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.
 
 In the code SAP Concur provides for a sample application connector, credentials are stored in a web configuration file that varies by platform, such as web.xml or web.config. However, if you are hosting the connector, you can customize where and how the credentials are stored by customizing HTTPBasicAuth.java or Authentication.cs.
 
 Expense will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. You will need to install the signed certificate before SAP Concur can access the connector.
 
-#### <a name="authentication"></a>Authentication
+#### <a name="authentication"></a>Fetch List Callout -Authentication
 Authentication between SAP Concur and the application connector is performed using HTTP Basic Auth. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. These credentials are entered in SAP Concur on the **Register Application Connector** page in **Web Services** under **Administration**.
 
-#### <a name="functions"></a>Functions
+#### <a name="functions"></a>Fetch List Callout -Functions
 
 * [Version 1.2: Post List Search Request](#post-a-list-search-request)
 
@@ -72,7 +72,7 @@ Authentication between SAP Concur and the application connector is performed usi
 
 Expense must have a list field configured to use an external source before this callout can be used. The client creates the list, SAP Concur configures it to use the external source, and the client creates the connected list definition if necessary.
 
-####  <a name="responses-errors"></a>Responses and Errors
+####  <a name="responses-errors"></a>Fetch List Callout - Responses and Errors
 
 Refer to the [HTTP Status Codes](#http-status-codes) page for details of the common responses and errors.
 

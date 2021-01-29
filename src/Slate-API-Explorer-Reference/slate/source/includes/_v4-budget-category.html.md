@@ -10,7 +10,7 @@
 * [Budget Item](#budget-v4-budget-item)
 * [Budget Tracking Field](#budget-v4-budget-tracking)
 * [Budget Adjustments](#budget-v4-budget-adjustments)
-* [Budget API Explorer](/#budget-service-api-documentation)
+
 
 This resource is used to retrieve and update budget categories which are collections of expense types used for budget matching.  Each budget item header may have one Budget Category.  If it does, only line items with expense types contained in that Budget Category will be accumulated to the budget.
 

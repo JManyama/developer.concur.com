@@ -10,7 +10,7 @@
 * [Budget Item](#budget-v4-budget-item)
 * [Budget Tracking Field](#budget-v4-budget-tracking)
 * [Budget Adjustments](#budget-v4-budget-adjustments)
-* [Budget API Explorer](/#budget-service-api-documentation)
+
 
 ### Budget Item
 

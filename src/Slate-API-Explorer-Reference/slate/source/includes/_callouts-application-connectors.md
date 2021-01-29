@@ -1,11 +1,11 @@
 ## Callouts and Application Connectors
 
-* [Overview](#overview)
-  * [Process Flow](#process-flow)
+* [Overview](#callouts-overview)
+  * [Process Flow](#callouts-process-flow)
   * [Application Connector Management](#app-connector-management)
 * [Specifications](#specifications)
   * [Security](#security)
-  * [Authentication](#authentication)
+  * [Authentication](#callouts-authentication)
 * [Managing Application Connectors](#managing-app-connectors)
   * [User Permission](#user-permission)
   * [Accessing Application Connector Registration](#accessing-app-connector-reg)
@@ -13,7 +13,7 @@
   * [Modifying an Application Connector Registration](#modifying-app-connector-reg)
   * [Deactivating an Application Connector Registration](#deactivating-app-connector-reg)
 
-###  <a name="overview"></a>Overview
+###  <a name="overview"></a>Callouts - Overview
 
 Callouts from SAP Concur allow clients to add an interaction with an outside system to their users' SAP Concur experience. The callouts require a web application, called an application connector, which SAP Concur will contact when appropriate. Application connectors can be hosted on the client's site or on a third-party hosting site.
 
@@ -40,7 +40,7 @@ The application connector can access SAP Concur data through the web services, o
 
 The application connector can use web services to send information to SAP Concur, to update field values on the expense entry form or other form types. The application connector may send the updates before or after the user closes the window. When the user returns to SAP Concur, the page refreshes and the user sees the current values.
 
-### <a name="process-flow"></a>Process Flow
+### <a name="process-flow"></a>Callouts - Process Flow
 
 ![A process flow diagram showing flow between SAP Concur and an application connector](./callout-flow.png)
 
@@ -56,7 +56,7 @@ SAP Concur will make calls to the application connector's endpoint using SSL. Du
 
 SAP Concur will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. If you are hosting the application connector, you will need to install the signed certificate before SAP Concur can access the connector.
 
-####  <a name="old-authentication"></a>Authentication
+####  <a name="old-authentication"></a>Callouts - Authentication
 
 **Authenticating to the application connector**
 

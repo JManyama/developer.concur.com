@@ -12,22 +12,22 @@ This callout differs from the standard SAP Concur web services in the following 
 * The developer or client can choose to create their own application connector using a different language, such as PHP, if preferred.
 
 ### Contents
-* [Process Flow](#process-flow)
-* [Products and Editions](#products-editions)
+* [Process Flow](#event-notifications-process-flow)
+* [Products and Editions](#event-notifications-products-editions)
 * [Example Use Case](#example-use-case)
 * [Product Restrictions](#product-restrictions)
 * [Event Notification Process Overview](#event-notification-process)
-* [Security](#security)
-* [Authentication](#authentication)
+* [Security](#event-notifications-security)
+* [Authentication](#event-notifications-authentication)
 * [Functions](#functions)
   * [Installation Process](#installation-process)
   * [Response and Errors](#response-errors)
 
-#### <a name="process-flow"></a>Process Flow
+#### <a name="process-flow"></a>Event Notifications - Process Flow
 
 ![Process Flow for the Event Notification Callout](./images/event-notification-process-flow.png)
 
-#### <a name="products-editions"></a>Products and Editions
+#### <a name="products-editions"></a>Event Notifications - Products and Editions
 
 * Concur Expense Professional Edition
 * Concur Request Professional Edition
@@ -69,7 +69,7 @@ Once the configuration is complete, the callout uses the following process:
 1. The configured event occurs in SAP Concur.
 2. SAP Concur sends the request information to the specified endpoint for the application connector.
 
-#### Security
+#### Event Notifications - Security
 
 SAP Concur will make calls to the application connector's endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.
 
@@ -77,7 +77,7 @@ In the code SAP Concur provides for a sample application connector, credentials 
 
 Expense or Travel Request will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. If you are hosting the application connector, you will need to install the signed certificate before SAP Concur can access the connector.
 
-#### Authentication
+#### Event Notifications - Authentication
 
 Authentication between SAP Concur and the application connector is performed using HTTP Basic Auth. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. These credentials are entered in SAP Concur on the **Register Application Connector** page in **Web Services** under **Administration**.
 

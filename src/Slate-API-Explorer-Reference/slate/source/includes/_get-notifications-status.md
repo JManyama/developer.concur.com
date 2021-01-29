@@ -3,13 +3,13 @@
 
 Retrieves the list of event notifications that are in the supplied status.
 
-* [Request](#request)
-  * [Request Example](#req-example)
-* [Response](#response)
-  * [Schema](#schema)
-  * [Response Examples](#res-examples)
+* [Request](#get-notifications-by-status-request)
+  * [Request Example](#get-notifications-by-status-request-example)
+* [Response](#get-notifications-by-status-response)
+  * [Schema](#get-notifications-by-status-schema)
+  * [Response Examples](#get-notifications-by-status-response-examples)
 
-### <a name="request"></a>Request
+### <a name="request"></a>Get notifications by status - Request
 
 #### Request Parameters
 
@@ -44,14 +44,14 @@ Authorization: OAuth {access token}
 Accept: application/xml
 ```
 
-####  <a name="response"></a>Response
+####  <a name="response"></a>Get notifications by status - Response
 
 #### Supported Content Types
 
 * application/xml
 * application/json
 
-#### <a name="schema"></a>Schema
+#### <a name="schema"></a>SGet notifications by status - Schema
 This request will return a **NotificationsList** parent element with a **Notification** child element for each failed notification. The **Notification** elements will have a **Failure** child element if the notification is failed.
 
 #### Failure Elements

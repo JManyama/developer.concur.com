@@ -11,30 +11,30 @@ This callout differs from the standard SAP Concur web services in the following 
 * The client SAP Concur Administrator must select the attendee types that will use this functionality during application connector registration. Once the attendee types are selected, they will be automatically configured to not allow users to create new attendees manually.
 
 ### Contents
-* [Process Flow](#process-flow)
-* [Products and Editions](#products-editions)
-* [Product Restrictions](#product-restrictions)
+* [Process Flow](#fetch-attendee-process-flow)
+* [Products and Editions](#fetch-attendee-products-editions)
+* [Product Restrictions](#fetch-attendee-product-restrictions)
 * [Callout Details](#concur-connect-callout-details)
 * [Fetch Attendee Process Overview](#fetch-attendee-process-overview)
-  * [Security](#security)
-  * [Authentication](#authentication)
-  * [Functions](#functions)
+  * [Security](#fetch-attendee-security)
+  * [Authentication](#fetch-attendee-authentication)
+  * [Functions](#fetch-attendee-functions)
 * [Installation Process](#installation-process)
   * [SAP Concur Configuration](#concur-config)
   * [Responses and Errors](#responses-errors)
 
-#### <a name="process-flow"></a>Process Flow
+#### <a name="process-flow"></a>Fetch Attendee - Process Flow
 
 ![A process flow diagram showing flow between SAP Concur, an application connector, and client's data source](./images/fetch-attendee.png)
 
-#### <a name="products-editions"></a>Products and Editions
+#### <a name="products-editions"></a>Fetch Attendee - Products and Editions
 
 * Concur Expense Professional Edition
 * Concur Expense Standard Edition
 * Expense in the SAP Mobile App
 * Concur Request Professional Edition
 
-#### <a name="product-restrictions"></a>Product Restrictions    
+#### <a name="product-restrictions"></a>Fetch Attendee - Product Restrictions    
 
 * SAP Concur products are highly configurable, and not all clients will have access to all features.
 * Partner developers must determine which configurations are required for their solution prior to the review process.
@@ -62,19 +62,19 @@ Once the configuration is complete, the callout uses the following process:
 SAP Concur will not resend the request unless the user manually initiates the search again.
 	6. If the user adds the attendees to the entry, the attendee information is saved in SAP Concur.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Fetch Attendee - Security
 
 SAP Concur will make calls to the application connector's endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.
 
 SAP Concur will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. You will need to install the signed certificate before SAP Concur can access the connector.
 
-#### <a name="authentication"></a>Authentication
+#### <a name="authentication"></a>Fetch Attendee - Authentication
 
 Authentication between SAP Concur and the application connector is performed using HTTP Basic Auth. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. These credentials are entered in SAP Concur on the **Register Application Connector** page in **Web Services** under **Administration**.
 
 Refer to the **Installation Process** for more information.
 
-#### <a name="functions"></a>Functions
+#### <a name="functions"></a>Fetch Attendee - Functions
 
 [Version 3.0: Post Attendee Search Request](#post-an-event-notification-request)
 

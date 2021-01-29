@@ -9,7 +9,7 @@
 * [Budget Item](#budget-v4-budget-item)
 * [Budget Tracking Field](#budget-v4-budget-tracking)
 * [Budget Adjustments](#budget-v4-budget-adjustments)
-* [Budget API Explorer](/#budget-service-api-documentation)
+
 
 This resource is used to retrieve information about Budget's tracking fields for an entity. Every entity may have a specific set of budget tracking fields and every budget may enable any or all of the budget tracking fields. If there are tracking fields associated, the budgets get matched to the product only when the tracking field conditions are met.
 

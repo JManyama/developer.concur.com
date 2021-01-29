@@ -3,16 +3,16 @@
 
 Delete an event notification.
 
-* [Request](#request)
+* [Request](#delete-notification-request)
   * [Request Example](#req-example)
-* [Response](#response)
-  * [Schema](#schema)
+* [Response](#delete-notification-response)
+  * [Schema](#delete-notification-schema)
   * [Response Example](#res-example)
 
 #### URI
 `https://www.concursolutions.com/api/platform/notifications/v1.0/notification/`
 
-#### <a name="request"></a>Request
+#### <a name="request"></a>Delete Notification - Request
 
 #### Request Parameters
 
@@ -45,14 +45,14 @@ Authorization: OAuth {access token}
 
 
 
-###  <a name="response"></a>Response
+###  <a name="response"></a>Delete Notification - Response
 
 ####  Content Types
 
 * application/xml
 * application/json
 
-### <a name="schema"></a>Schema
+### <a name="schema"></a>Delete Notification - Schema
 
 The response returns an HTTP Status Code as follows:
 

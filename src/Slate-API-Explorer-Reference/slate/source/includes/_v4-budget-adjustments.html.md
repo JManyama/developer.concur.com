@@ -11,7 +11,7 @@
 * [Budget Item](#budget-v4-budget-item)
 * [Budget Tracking Field](#budget-v4-budget-tracking)
 * [Budget Adjustments](#budget-v4-budget-adjustments)
-* [Budget API Explorer](/#budget-service-api-documentation)
+
 
 This resource is used to add budget adjustments. Each budget item detail may have one or more budget adjustments and adjustments can be made to manually add or subtract the budget, spent or pending balances.
 

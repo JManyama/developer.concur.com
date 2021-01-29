@@ -3,7 +3,7 @@
 
 * [Base URIs](#base_uris)
 * [Exchanging a Token](#exchangetoken)
-* [Response Codes](#response_codes)
+* [Response Codes](#migration-response_codes)
 
 Existing applications that use the [Pre-2017 Authorization (Deprecated)](/slate-ui-build/api-reference.html#pre-2017-authorization-deprecated) framework need to move to support the new Oauth2 Bearer Tokens. Applications will need to migrate their existing users who already have connected to it to obtain new Oauth2 tokens without requiring users to reauthorize. This can be done by exchanging an old access token for a new refresh token.
 
@@ -119,7 +119,7 @@ successful call, responds with:
 
 
 
-#### <a name="response_codes"></a>Response Codes
+#### <a name="response_codes"></a>Migration - Response Codes
 
 #### HTTP Status returned by exchangeAccessToken
 
