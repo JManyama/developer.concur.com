@@ -279,7 +279,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-2d4f4de5.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-44a7594e.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-5c176cca.js"></script>
 
@@ -2764,19 +2764,19 @@ None</p>
 </ol>
 <h2 id='company-level-authentication'>Company Level Authentication</h2>
 <ul>
-<li><a href="#">Overview</a></li>
+<li><a href="#company-level-authentication">Overview</a></li>
 <li><a href="#company">Company</a></li>
 <li><a href="#obtaining-a-one-time-auth-token">Obtaining a one-time auth token</a></li>
-<li><a href="#response-codes">Response Codes</a></li>
+<li><a href="#company-level-authentication-response-codes">Response Codes</a></li>
 </ul>
 <h3 id='company'>Company</h3>
 <!--## <a name="company"></a>Company-->
 
-<p>Company is a top-level principal within Concur and you would be able to obtain an access token and a refresh token on a Company&#39;s behalf just like you would be able to with a User. Only one authorization flow is currently available for obtaining tokens for a Company, which is the <a href="/slate-ui/build/api-reference.html#password_grant">Password grant</a> using a temporary auth token received from the App Center.</p>
+<p>Company is a top-level principal within Concur and you would be able to obtain an access token and a refresh token on a Company&#39;s behalf just like you would be able to with a User. Only one authorization flow is currently available for obtaining tokens for a Company, which is the <a href="#password_grant">Password grant</a> using a temporary auth token received from the App Center.</p>
 <h3 id='obtaining-a-one-time-auth-token'>Obtaining A One-Time Auth Token</h3>
 <!--## <a name="obtain_token"></a>Obtaining an auth token-->
 
-<p>To begin the authentication flow for a company, one must first obtain a temporary auth token through AppCenter&#39;s interface. AppCenter will request for a temporary auth token and hand it off to the partner, who will then in turn use <a href="/slate-ui/build/api-reference.html#password_grant">Password grant</a> to exchange the temporary auth token for a full access token and refresh token for the company.</p>
+<p>To begin the authentication flow for a company, one must first obtain a temporary auth token through AppCenter&#39;s interface. AppCenter will request for a temporary auth token and hand it off to the partner, who will then in turn use <a href="#password_grant">Password grant</a> to exchange the temporary auth token for a full access token and refresh token for the company.</p>
 
 <p>Auth tokens are valid only for 12 hours.  Partners have 12 hours to exchange the auth token for a refresh and access token, and can use this auth token multiple times within the 12 hours in case of network failure.</p>
 
@@ -2912,7 +2912,7 @@ Connection: Close
   </span><span class="nl">"error_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Incorrect Credentials. Please Retry"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='response-codes'>Response Codes</h3>
+</span></code></pre></div><h3 id='company-level-authentication-response-codes'>Company Level Authentication - Response Codes</h3>
 <!--## <a name="response_codes"></a>Response Codes-->
 <h4 id='http-status-code-returned-by-oauth2'>HTTP Status Code returned by oauth2</h4>
 <table><thead>
@@ -3185,7 +3185,7 @@ Connection: Close
 <ul>
 <li><a href="#base_uris">Base URIs</a></li>
 <li><a href="#exchangetoken">Exchanging a Token</a></li>
-<li><a href="#response_codes">Response Codes</a></li>
+<li><a href="#migration-response_codes">Response Codes</a></li>
 </ul>
 
 <p>Existing applications that use the <a href="/slate-ui-build/api-reference.html#pre-2017-authorization-deprecated">Pre-2017 Authorization (Deprecated)</a> framework need to move to support the new Oauth2 Bearer Tokens. Applications will need to migrate their existing users who already have connected to it to obtain new Oauth2 tokens without requiring users to reauthorize. This can be done by exchanging an old access token for a new refresh token.</p>
@@ -3306,7 +3306,7 @@ Clients can exchange OLD tokens for NEW Oauth2 tokens by calling the <code>excha
   </span><span class="nl">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31456dcd-b46a-4292-b2d3-f97033338487"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"geolocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://us.api.concursolutions.com"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h4 id='response-codes'><a name="response_codes"></a>Response Codes</h4><h4 id='http-status-returned-by-exchangeaccesstoken'>HTTP Status returned by exchangeAccessToken</h4>
+</span></code></pre></div><h4 id='migration-response-codes'><a name="response_codes"></a>Migration - Response Codes</h4><h4 id='http-status-returned-by-exchangeaccesstoken'>HTTP Status returned by exchangeAccessToken</h4>
 <table><thead>
 <tr>
 <th>HTTP Status</th>
@@ -4927,7 +4927,6 @@ Authorization: Bearer {token}
 <li><a href="#budget-v4-budget-item">Budget Item</a></li>
 <li><a href="#budget-v4-budget-tracking">Budget Tracking Field</a></li>
 <li><a href="#budget-v4-budget-adjustments">Budget Adjustments</a></li>
-<li><a href="/#budget-service-api-documentation">Budget API Explorer</a></li>
 </ul>
 
 <p>This resource is used to retrieve and update budget categories which are collections of expense types used for budget matching.  Each budget item header may have one Budget Category.  If it does, only line items with expense types contained in that Budget Category will be accumulated to the budget.</p>
@@ -5483,7 +5482,6 @@ Accept: application/json
 <li><a href="#budget-v4-budget-item">Budget Item</a></li>
 <li><a href="#budget-v4-budget-tracking">Budget Tracking Field</a></li>
 <li><a href="#budget-v4-budget-adjustments">Budget Adjustments</a></li>
-<li><a href="/#budget-service-api-documentation">Budget API Explorer</a></li>
 </ul>
 <h3 id='budget-item'>Budget Item</h3>
 <p>This resource is used to retrieve and update information about a budget that spans a single fiscal year. Each budget has multiple details that correspond to fiscal periods - months, quarters, or a single period for a yearly budget.</p>
@@ -7184,7 +7182,6 @@ concur-correlationid: 86a0d9fe-9e98-43c3-89d8-a2917dd844cb
 <li><a href="#budget-v4-budget-item">Budget Item</a></li>
 <li><a href="#budget-v4-budget-tracking">Budget Tracking Field</a></li>
 <li><a href="#budget-v4-budget-adjustments">Budget Adjustments</a></li>
-<li><a href="/#budget-service-api-documentation">Budget API Explorer</a></li>
 </ul>
 
 <p>This resource is used to retrieve information about Budget&#39;s tracking fields for an entity. Every entity may have a specific set of budget tracking fields and every budget may enable any or all of the budget tracking fields. If there are tracking fields associated, the budgets get matched to the product only when the tracking field conditions are met.</p>
@@ -7371,7 +7368,6 @@ Accept: application/json
 <li><a href="#budget-v4-budget-item">Budget Item</a></li>
 <li><a href="#budget-v4-budget-tracking">Budget Tracking Field</a></li>
 <li><a href="#budget-v4-budget-adjustments">Budget Adjustments</a></li>
-<li><a href="/#budget-service-api-documentation">Budget API Explorer</a></li>
 </ul>
 
 <p>This resource is used to add budget adjustments. Each budget item detail may have one or more budget adjustments and adjustments can be made to manually add or subtract the budget, spent or pending balances.</p>
@@ -7621,17 +7617,17 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 </tbody></table>
 <h1 id='callouts'>Callouts</h1><h2 id='callouts-and-application-connectors'>Callouts and Application Connectors</h2>
 <ul>
-<li><a href="#overview">Overview</a>
+<li><a href="#callouts-overview">Overview</a>
 
 <ul>
-<li><a href="#process-flow">Process Flow</a></li>
+<li><a href="#callouts-process-flow">Process Flow</a></li>
 <li><a href="#app-connector-management">Application Connector Management</a></li>
 </ul></li>
 <li><a href="#specifications">Specifications</a>
 
 <ul>
 <li><a href="#security">Security</a></li>
-<li><a href="#authentication">Authentication</a></li>
+<li><a href="#callouts-authentication">Authentication</a></li>
 </ul></li>
 <li><a href="#managing-app-connectors">Managing Application Connectors</a>
 
@@ -7643,7 +7639,7 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 <li><a href="#deactivating-app-connector-reg">Deactivating an Application Connector Registration</a></li>
 </ul></li>
 </ul>
-<h3 id='overview'><a name="overview"></a>Overview</h3>
+<h3 id='callouts-overview'><a name="overview"></a>Callouts - Overview</h3>
 <p>Callouts from SAP Concur allow clients to add an interaction with an outside system to their users&#39; SAP Concur experience. The callouts require a web application, called an application connector, which SAP Concur will contact when appropriate. Application connectors can be hosted on the client&#39;s site or on a third-party hosting site.</p>
 
 <p>Third-party developers can create callouts to provide SAP Concur clients access to information systems they manage. These developers partner with SAP Concur to have their application connectors reviewed. Once reviewed, applications are available for SAP Concur clients to purchase and configure.</p>
@@ -7670,7 +7666,7 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 <p>The application connector can access SAP Concur data through the web services, or can access data in an external system. Once the user has completed their actions in the window (such as performing a search or completing a wizard), he/she clicks a button such as &quot;Done&quot; that indicates he/she has concluded their work in the window. The application connector then closes the window.</p>
 
 <p>The application connector can use web services to send information to SAP Concur, to update field values on the expense entry form or other form types. The application connector may send the updates before or after the user closes the window. When the user returns to SAP Concur, the page refreshes and the user sees the current values.</p>
-<h3 id='process-flow'><a name="process-flow"></a>Process Flow</h3>
+<h3 id='callouts-process-flow'><a name="process-flow"></a>Callouts - Process Flow</h3>
 <p><img src="images/callout-flow-25a55f44.png" alt="A process flow diagram showing flow between SAP Concur and an application connector" /></p>
 <h4 id='application-connector-management'><a name="app-connector-management"></a>Application Connector Management</h4>
 <p>SAP Concur administrators use the <strong>Manage</strong> <strong>Application Connectors</strong> link on the <strong>Web Services</strong> page under <strong>Administration</strong> to register, test and enable application connectors.</p>
@@ -7678,7 +7674,7 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 <p>SAP Concur will make calls to the application connector&#39;s endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.</p>
 
 <p>SAP Concur will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. If you are hosting the application connector, you will need to install the signed certificate before SAP Concur can access the connector.</p>
-<h4 id='authentication'><a name="old-authentication"></a>Authentication</h4>
+<h4 id='callouts-authentication'><a name="old-authentication"></a>Callouts - Authentication</h4>
 <p><strong>Authenticating to the application connector</strong></p>
 
 <p>Expense passes credentials using HTTP Basic Auth to authenticate with the application connector. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. The steps to configure Expense with the credentials are detailed below.</p>
@@ -7775,21 +7771,21 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 <p>Delete an event notification.</p>
 
 <ul>
-<li><a href="#request">Request</a>
+<li><a href="#delete-notification-request">Request</a>
 
 <ul>
 <li><a href="#req-example">Request Example</a></li>
 </ul></li>
-<li><a href="#response">Response</a>
+<li><a href="#delete-notification-response">Response</a>
 
 <ul>
-<li><a href="#schema">Schema</a></li>
+<li><a href="#delete-notification-schema">Schema</a></li>
 <li><a href="#res-example">Response Example</a></li>
 </ul></li>
 </ul>
 <h4 id='uri'>URI</h4>
 <p><code>https://www.concursolutions.com/api/platform/notifications/v1.0/notification/</code></p>
-<h4 id='request'><a name="request"></a>Request</h4><h4 id='request-parameters'>Request Parameters</h4>
+<h4 id='delete-notification-request'><a name="request"></a>Delete Notification - Request</h4><h4 id='request-parameters'>Request Parameters</h4>
 <p><strong>notificationID</strong>: The unique identifier for the notification. Required.</p>
 
 <p>Example:<br>
@@ -7807,12 +7803,12 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 </ul>
 <div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">DELETE</span> <span class="nn">https://www.concursolutions.com/api/platform/notifications/v1.0/notification/nOB1KNTDSV0UqiYeTsy6su$praZSogRJB6</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">OAuth {access token}</span>
-</code></pre></div><h4 id='xml-example-request'><a name="req-example"></a>XML Example Request</h4><h3 id='response'><a name="response"></a>Response</h3><h4 id='content-types'>Content Types</h4>
+</code></pre></div><h4 id='xml-example-request'><a name="req-example"></a>XML Example Request</h4><h3 id='delete-notification-response'><a name="response"></a>Delete Notification - Response</h3><h4 id='content-types'>Content Types</h4>
 <ul>
 <li>application/xml</li>
 <li>application/json</li>
 </ul>
-<h3 id='schema'><a name="schema"></a>Schema</h3>
+<h3 id='delete-notification-schema'><a name="schema"></a>Delete Notification - Schema</h3>
 <p>The response returns an HTTP Status Code as follows:</p>
 
 <table><thead>
@@ -7849,13 +7845,13 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 </ul>
 <h3 id='contents'>Contents</h3>
 <ul>
-<li><a href="#process-flow">Process Flow</a></li>
-<li><a href="#products-editions">Products and Editions</a></li>
+<li><a href="#event-notifications-process-flow">Process Flow</a></li>
+<li><a href="#event-notifications-products-editions">Products and Editions</a></li>
 <li><a href="#example-use-case">Example Use Case</a></li>
 <li><a href="#product-restrictions">Product Restrictions</a></li>
 <li><a href="#event-notification-process">Event Notification Process Overview</a></li>
-<li><a href="#security">Security</a></li>
-<li><a href="#authentication">Authentication</a></li>
+<li><a href="#event-notifications-security">Security</a></li>
+<li><a href="#event-notifications-authentication">Authentication</a></li>
 <li><a href="#functions">Functions</a>
 
 <ul>
@@ -7863,9 +7859,9 @@ concur-correlationid: 561ce34c-6542-4bae-82a2-aa6ccd8c6b22
 <li><a href="#response-errors">Response and Errors</a></li>
 </ul></li>
 </ul>
-<h4 id='process-flow'><a name="process-flow"></a>Process Flow</h4>
+<h4 id='event-notifications-process-flow'><a name="process-flow"></a>Event Notifications - Process Flow</h4>
 <p><img src="images/event-notification-process-flow-6541a0b2.png" alt="Process Flow for the Event Notification Callout" /></p>
-<h4 id='products-and-editions'><a name="products-editions"></a>Products and Editions</h4>
+<h4 id='event-notifications-products-and-editions'><a name="products-editions"></a>Event Notifications - Products and Editions</h4>
 <ul>
 <li>Concur Expense Professional Edition</li>
 <li>Concur Request Professional Edition</li>
@@ -7906,13 +7902,13 @@ Refer to <strong>Installation &gt; Process</strong> for the detailed steps.</p><
 <li>The configured event occurs in SAP Concur.</li>
 <li>SAP Concur sends the request information to the specified endpoint for the application connector.</li>
 </ol>
-<h4 id='security'>Security</h4>
+<h4 id='event-notifications-security'>Event Notifications - Security</h4>
 <p>SAP Concur will make calls to the application connector&#39;s endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.</p>
 
 <p>In the code SAP Concur provides for a sample application connector, credentials are stored in a web configuration file that varies by platform, such as web.xml or web.config. However, if you are hosting the connector, you can customize where and how the credentials are stored by customizing HTTPBasicAuth.java or Authentication.cs.</p>
 
 <p>Expense or Travel Request will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. If you are hosting the application connector, you will need to install the signed certificate before SAP Concur can access the connector.</p>
-<h4 id='authentication'>Authentication</h4>
+<h4 id='event-notifications-authentication'>Event Notifications - Authentication</h4>
 <p>Authentication between SAP Concur and the application connector is performed using HTTP Basic Auth. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. These credentials are entered in SAP Concur on the <strong>Register Application Connector</strong> page in <strong>Web Services</strong> under <strong>Administration</strong>.</p>
 
 <p>Refer to the <strong>Callouts and Application Connectors</strong> page for more information.</p>
@@ -7991,16 +7987,16 @@ Refer to <strong>Installation &gt; Process</strong> for the detailed steps.</p><
 </ul>
 <h3 id='contents'>Contents</h3>
 <ul>
-<li><a href="#process-flow">Process Flow</a></li>
-<li><a href="#products-editions">Products and Editions</a></li>
-<li><a href="#product-restrictions">Product Restrictions</a></li>
+<li><a href="#fetch-attendee-process-flow">Process Flow</a></li>
+<li><a href="#fetch-attendee-products-editions">Products and Editions</a></li>
+<li><a href="#fetch-attendee-product-restrictions">Product Restrictions</a></li>
 <li><a href="#concur-connect-callout-details">Callout Details</a></li>
 <li><a href="#fetch-attendee-process-overview">Fetch Attendee Process Overview</a>
 
 <ul>
-<li><a href="#security">Security</a></li>
-<li><a href="#authentication">Authentication</a></li>
-<li><a href="#functions">Functions</a></li>
+<li><a href="#fetch-attendee-security">Security</a></li>
+<li><a href="#fetch-attendee-authentication">Authentication</a></li>
+<li><a href="#fetch-attendee-functions">Functions</a></li>
 </ul></li>
 <li><a href="#installation-process">Installation Process</a>
 
@@ -8009,16 +8005,16 @@ Refer to <strong>Installation &gt; Process</strong> for the detailed steps.</p><
 <li><a href="#responses-errors">Responses and Errors</a></li>
 </ul></li>
 </ul>
-<h4 id='process-flow'><a name="process-flow"></a>Process Flow</h4>
+<h4 id='fetch-attendee-process-flow'><a name="process-flow"></a>Fetch Attendee - Process Flow</h4>
 <p><img src="images/fetch-attendee-11582078.png" alt="A process flow diagram showing flow between SAP Concur, an application connector, and client's data source" /></p>
-<h4 id='products-and-editions'><a name="products-editions"></a>Products and Editions</h4>
+<h4 id='fetch-attendee-products-and-editions'><a name="products-editions"></a>Fetch Attendee - Products and Editions</h4>
 <ul>
 <li>Concur Expense Professional Edition</li>
 <li>Concur Expense Standard Edition</li>
 <li>Expense in the SAP Mobile App</li>
 <li>Concur Request Professional Edition</li>
 </ul>
-<h4 id='product-restrictions'><a name="product-restrictions"></a>Product Restrictions</h4>
+<h4 id='fetch-attendee-product-restrictions'><a name="product-restrictions"></a>Fetch Attendee - Product Restrictions</h4>
 <ul>
 <li>SAP Concur products are highly configurable, and not all clients will have access to all features.</li>
 <li>Partner developers must determine which configurations are required for their solution prior to the review process.</li>
@@ -8047,15 +8043,15 @@ SAP Concur will not resend the request unless the user manually initiates the se
 <li>If the user adds the attendees to the entry, the attendee information is saved in SAP Concur.</li>
 </ol></li>
 </ol>
-<h4 id='security'><a name="security"></a>Security</h4>
+<h4 id='fetch-attendee-security'><a name="security"></a>Fetch Attendee - Security</h4>
 <p>SAP Concur will make calls to the application connector&#39;s endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.</p>
 
 <p>SAP Concur will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. You will need to install the signed certificate before SAP Concur can access the connector.</p>
-<h4 id='authentication'><a name="authentication"></a>Authentication</h4>
+<h4 id='fetch-attendee-authentication'><a name="authentication"></a>Fetch Attendee - Authentication</h4>
 <p>Authentication between SAP Concur and the application connector is performed using HTTP Basic Auth. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. These credentials are entered in SAP Concur on the <strong>Register Application Connector</strong> page in <strong>Web Services</strong> under <strong>Administration</strong>.</p>
 
 <p>Refer to the <strong>Installation Process</strong> for more information.</p>
-<h4 id='functions'><a name="functions"></a>Functions</h4>
+<h4 id='fetch-attendee-functions'><a name="functions"></a>Fetch Attendee - Functions</h4>
 <p><a href="#post-an-event-notification-request">Version 3.0: Post Attendee Search Request</a></p>
 <h4 id='installation-process'><a name="installation-process"></a>Installation Process</h4>
 <p>The installation process includes installing the application connector, and registering it with SAP Concur.</p>
@@ -8129,30 +8125,30 @@ SAP Concur will not resend the request unless the user manually initiates the se
 </ul>
 <h3 id='contents'>Contents</h3>
 <ul>
-<li><a href="#process-flow">Process Flow</a></li>
-<li><a href="#products-editions">Products and Editions</a></li>
-<li><a href="#product-restrictions">Product Restrictions</a></li>
-<li><a href="#fetch-list-process-overview">Fetch List Process Overview</a></li>
-<li><a href="#security">Security</a></li>
-<li><a href="#authentication">Authentication</a></li>
-<li><a href="#functions">Functions</a></li>
+<li><a href="#fetch-list-callout-process-flow">Process Flow</a></li>
+<li><a href="#fetch-list-callout-products-editions">Products and Editions</a></li>
+<li><a href="#fetch-list-callout-product-restrictions">Product Restrictions</a></li>
+<li><a href="#fetch-list-callout-process-overview">Fetch List Process Overview</a></li>
+<li><a href="#fetch-list-callout-security">Security</a></li>
+<li><a href="#fetch-list-callout-authentication">Authentication</a></li>
+<li><a href="#fetch-list-callout-functions">Functions</a></li>
 <li><a href="#concur-expense-config">Concur Expense Configuration</a></li>
-<li><a href="#responses-errors">Responses and Errors</a></li>
+<li><a href="#fetch-list-callout-responses-errors">Responses and Errors</a></li>
 </ul>
-<h4 id='process-flow'><a name="process-flow"></a>Process Flow</h4>
+<h4 id='fetch-list-callout-process-flow'><a name="process-flow"></a>Fetch List Callout - Process Flow</h4>
 <p><img src="images/fetch-list-item-a491873a.png" alt="A process flow diagram showing flow between SAP Concur, an application connector, and client's data source" /></p>
-<h4 id='products-and-editions'><a name="products-editions"></a>Products and Editions</h4>
+<h4 id='fetch-list-callout-products-and-editions'><a name="products-editions"></a>Fetch List Callout -Products and Editions</h4>
 <ul>
 <li>Concur Expense Professional Edition</li>
 <li>The SAP Concur Mobile App</li>
 </ul>
-<h4 id='product-restrictions'><a name="product-restrictions"></a>Product Restrictions</h4>
+<h4 id='fetch-list-callout-product-restrictions'><a name="product-restrictions"></a>Fetch List Callout -Product Restrictions</h4>
 <p>SAP Concur products are highly configurable, and not all clients will have access to all features.</p>
 
 <p>Partner developers must determine which configurations are required for their solution prior to the review process.</p>
 
 <p>Existing clients can work with Concur Advantage Technical Services to create custom applications that work with their configuration.</p>
-<h4 id='fetch-list-process-overview'><a name="fetch-list-process-overview"></a>Fetch List Process Overview</h4>
+<h4 id='fetch-list-callout-process-overview'><a name="fetch-list-process-overview"></a>Fetch List Callout -Process Overview</h4>
 <p>The configuration process has the following steps:</p>
 
 <ol>
@@ -8172,39 +8168,39 @@ SAP Concur will not resend the request unless the user manually initiates the se
 <li>Expense displays the list items in a drop down list.</li>
 <li>The user selects the desired list item and saves the expense.</li>
 </ol>
-<h4 id='security'><a name="security"></a>Security</h4>
+<h4 id='fetch-list-callout-security'><a name="security"></a>Fetch List Callout - Security</h4>
 <p>SAP Concur will make calls to the application connector&#39;s endpoint using SSL. During configuration, SAP Concur will connect to the application connector to validate that its hostname and access credentials are valid.</p>
 
 <p>In the code SAP Concur provides for a sample application connector, credentials are stored in a web configuration file that varies by platform, such as web.xml or web.config. However, if you are hosting the connector, you can customize where and how the credentials are stored by customizing HTTPBasicAuth.java or Authentication.cs.</p>
 
 <p>Expense will not be able to connect to the application connector until a certificate signed by a Certificate Authority (CA) is installed in the application connector. You will need to install the signed certificate before SAP Concur can access the connector.</p>
-<h4 id='authentication'><a name="authentication"></a>Authentication</h4>
+<h4 id='fetch-list-callout-authentication'><a name="authentication"></a>Fetch List Callout -Authentication</h4>
 <p>Authentication between SAP Concur and the application connector is performed using HTTP Basic Auth. By default, these credentials are stored in the appropriate web configuration file for your platform, such as web.xml or web.config. These credentials are entered in SAP Concur on the <strong>Register Application Connector</strong> page in <strong>Web Services</strong> under <strong>Administration</strong>.</p>
-<h4 id='functions'><a name="functions"></a>Functions</h4>
+<h4 id='fetch-list-callout-functions'><a name="functions"></a>Fetch List Callout -Functions</h4>
 <ul>
 <li><a href="#post-a-list-search-request">Version 1.2: Post List Search Request</a></li>
 </ul>
 <h4 id='concur-expense-configuration'><a name="concur-expense-config"></a>Concur Expense Configuration</h4>
 <p>Expense must have a list field configured to use an external source before this callout can be used. The client creates the list, SAP Concur configures it to use the external source, and the client creates the connected list definition if necessary.</p>
-<h4 id='responses-and-errors'><a name="responses-errors"></a>Responses and Errors</h4>
+<h4 id='fetch-list-callout-responses-and-errors'><a name="responses-errors"></a>Fetch List Callout - Responses and Errors</h4>
 <p>Refer to the <a href="#http-status-codes">HTTP Status Codes</a> page for details of the common responses and errors.</p>
 <h2 id='get-notifications-by-status'>Get notifications by status</h2>
 <p>Retrieves the list of event notifications that are in the supplied status.</p>
 
 <ul>
-<li><a href="#request">Request</a>
+<li><a href="#get-notifications-by-status-request">Request</a>
 
 <ul>
-<li><a href="#req-example">Request Example</a></li>
+<li><a href="#get-notifications-by-status-request-example">Request Example</a></li>
 </ul></li>
-<li><a href="#response">Response</a>
+<li><a href="#get-notifications-by-status-response">Response</a>
 
 <ul>
-<li><a href="#schema">Schema</a></li>
-<li><a href="#res-examples">Response Examples</a></li>
+<li><a href="#get-notifications-by-status-schema">Schema</a></li>
+<li><a href="#get-notifications-by-status-response-examples">Response Examples</a></li>
 </ul></li>
 </ul>
-<h3 id='request'><a name="request"></a>Request</h3><h4 id='request-parameters'>Request Parameters</h4>
+<h3 id='get-notifications-by-status-request'><a name="request"></a>Get notifications by status - Request</h3><h4 id='request-parameters'>Request Parameters</h4>
 <p><strong>status={<em>status</em>}</strong><br>
 The desired status for the notification. Required. Currently supports <strong>failed</strong>.</p>
 
@@ -8224,12 +8220,12 @@ The desired status for the notification. Required. Currently supports <strong>fa
 <h4 id='xml-example-request'><a name="req-example"></a>XML Example Request</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://www.concursolutions.com/api/platform/notifications/v1.0/notification?status=FAILED</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">OAuth {access token}</span>
 <span class="na">Accept</span><span class="p">:</span> <span class="s">application/xml</span>
-</code></pre></div><h4 id='response'><a name="response"></a>Response</h4><h4 id='supported-content-types'>Supported Content Types</h4>
+</code></pre></div><h4 id='get-notifications-by-status-response'><a name="response"></a>Get notifications by status - Response</h4><h4 id='supported-content-types'>Supported Content Types</h4>
 <ul>
 <li>application/xml</li>
 <li>application/json</li>
 </ul>
-<h4 id='schema'><a name="schema"></a>Schema</h4>
+<h4 id='sget-notifications-by-status-schema'><a name="schema"></a>SGet notifications by status - Schema</h4>
 <p>This request will return a <strong>NotificationsList</strong> parent element with a <strong>Notification</strong> child element for each failed notification. The <strong>Notification</strong> elements will have a <strong>Failure</strong> child element if the notification is failed.</p>
 <h4 id='failure-elements'>Failure Elements</h4>
 <table><thead>
