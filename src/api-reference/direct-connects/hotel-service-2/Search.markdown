@@ -34,7 +34,6 @@ Message to perform the initial search for hotels.
     * [Contact Number](#contact-number)
     * [Award](#award)
     * [Hotel Amenity](#hotel-amenity)
-    * [Supported Hotel Amenities](#supported-hotel-amenities)
     * [TPA Extensions](#res-tpa-extensions)
     * [TPA Hotel Preview Image URI](#tpa-hotel-preview)
 
@@ -169,8 +168,7 @@ The maximum allowed size of `OTA_HotelSearchRS` is 1 MB. Any response that excee
             <ContactNumber CountryAccessCode="49" PhoneNumber="56940033" PhoneTechType="1"/>
           </ContactNumbers>
           <Award Rating="4"/>
-          <HotelAmenity Code="173"/>
-          <HotelAmenity Code="255"/>
+          <HotelAmenity Code="68"/>
           <TPA_Extensions>
             <HotelPreference>not_preferred</HotelPreference>
             <TPA_HotelPreviewImageURI>
@@ -204,10 +202,10 @@ The maximum allowed size of `OTA_HotelSearchRS` is 1 MB. Any response that excee
 
 |Name|Type|Description|
 |----------------|-------------------|-------------|
-|`ChainCode`|`stringLength1to8`|2-letter valid GDS chain code. The code that identifies a hotel chain or management group. Must be present to support filtering, preferences or travel rules base on chains|
-|`ChainName`|`stringLength1to64`|The name of the hotel chain. Examples: `Hilton`, `Marriott`, `Hyatt`, `Starwood`|
-|`HotelCode`|`stringLength1to16`|**Required** The code that uniquely identifies a single hotel property. Used in other OTA messages.|
-|`HotelName`|`stringLength1to128`|**Required** A text field used to communicate the proper name of the hotel.|
+|`ChainCode`|`stringLength1to32`|2-letter valid GDS chain code. The code that identifies a hotel chain or management group. Must be present to support filtering, preferences or travel rules base on chains|
+|`ChainName`|`stringLength1to32`|The name of the hotel chain. Examples: `Hilton`, `Marriott`, `Hyatt`, `Starwood`|
+|`HotelCode`|`stringLength1to32`|**Required** The code that uniquely identifies a single hotel property. Used in other OTA messages.|
+|`HotelName`|`stringLength1to32`|**Required** A text field used to communicate the proper name of the hotel.|
 |`Position`|`complex`|**Required** Refer to `Position` in the Request.|
 |`Address`|`complex`|**Required** Public address of the hotel property.|
 |`ContactNumbers`|`complex`|Contact numbers.|
@@ -255,36 +253,13 @@ The maximum allowed size of `OTA_HotelSearchRS` is 1 MB. Any response that excee
 
 |Name|Type|Description|
 |----------|-----------|-------------|
-|`Rating`|`integer`|**Required** Hotel rating should be an integer number from 0 to 5, representing its star rating. A rating value of 0 will be ignored and treated as N/A.|
+|`Rating`|`integer`|**Required** Hotel rating should be an integer number from 0 to 5, representing its star rating.|
 
 #### <a name="hotel-amenity"></a>HotelAmenity
 
 |Name|Type|Description|
 |---------|--------------|-------------|
-|`Code`|`string`|Refer to `Supported Hotel Amenities`|
-
-#### <a name="supported-hotel-amenities"></a>Supported Hotel Amenities
-
-|Code|Description|
-|-------------------|-------------|  
-|`173`|Breakfast|
-|`255`|Broadband Internet|
-|`228`|Business Center|
-|`215`|Convention Center|
-|`96`|Dry Cleaning|
-|`48`|Fitness Center|
-|`44`|Game Room|
-|`236`|Golf Course|
-|`54`|Indoor Pool|
-|`289`|Kids Activities|
-|`269`|Meeting Rooms|
-|`198`|Non-smoking Rooms|
-|`66`|Outdoor Pool|
-|`224`|Pets Allowed|
-|`76`|Restaurant|
-|`71`|Swimming Pool|
-|`233`|Tennis Court|
-|`101`|Wheelchair Accessible|
+|`Code`|`string`|**Required** Refer to OpenTravel Code List Hotel Amenity Code (HAC).|
 
 #### <a name="res-tpa-extensions"></a>TPA Extensions
 
@@ -297,4 +272,4 @@ The maximum allowed size of `OTA_HotelSearchRS` is 1 MB. Any response that excee
 
 |Name|Type|Description|
 |---------|-------------------|-------------|
-|`URL`|`string`|**Required** URL of the multimedia item for a specific format. SAP Concur supports one image URL in the Search Response. For the ability to display more images refer to Descriptive Info message. The image will be used as a thumbnail and should be limited to 70x70 pixels to prevent image artifacts by scaling. |
+|`URL`|`stringLength1to32`|**Required** URL of the multimedia item for a specific format. SAP Concur supports one image URL in the Search Response. For the ability to display more images refer to Descriptive Info message. The image will be used as a thumbnail and should be limited to 70x70 pixels to prevent image artifacts by scaling. |

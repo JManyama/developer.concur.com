@@ -1,13 +1,12 @@
----
-title: Direct Connect - Hotel v2 - Appendix
-layout: reference
----
 
-# Search
+## Appendix
+
+
+### Search 
 
 ![./media/image1.png](./images/examples/search.png)
 
-### Request
+#### Request
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
@@ -37,7 +36,7 @@ layout: reference
 </Envelope>
  ```
 
-### Response
+#### Response
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
@@ -54,10 +53,11 @@ layout: reference
             <CountryName Code="FR">French Republic France</CountryName>
           </Address>
           <Award Rating="2"/>
-          <HotelAmenity Code="255"/>
+          <HotelAmenity Code="68"/>
+          <HotelAmenity Code="198"/>
           <HotelAmenity Code="71"/>
-          <HotelAmenity Code="224"/>
-          <HotelAmenity Code="96"/>
+          <HotelAmenity Code="101"/>
+          <HotelAmenity Code="33"/>
           <Policy CheckInTime="14:00:00" CheckOutTime="12:00:00"/>
           <TPA_Extensions>
             <HotelPreference>not_preferred</HotelPreference>
@@ -75,11 +75,11 @@ layout: reference
 </soap:Envelope>
 ```
 
-# Availability
+#### Availability
 
 The initial Search request (see above) is followed up by an multi-property Availability request.  In the example request below Concur requests the availability for 13 properties.  This could because the initial search only yielded 13 properties or the configuration per vendor is set to request availability for a maximum of 13 properties.
 
-### Request
+#### Request
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -155,7 +155,7 @@ The initial Search request (see above) is followed up by an multi-property Avail
 </Envelope>
 ```
 
-### Response
+#### Response
 
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -191,7 +191,9 @@ The initial Search request (see above) is followed up by an multi-property Avail
           </RoomTypes>
           <RatePlans>
             <RatePlan AvailabilityStatus="AvailableForSale" PrepaidIndicator="false" RatePlanID="TOGG3BU">
-              <Guarantee GuaranteeType="GuaranteeRequired" />
+              <Guarantee GuaranteeType="GuaranteeRequired">
+                <Deadline AbsoluteDeadline="2019-05-08T23:59:59"/>
+              </Guarantee>
               <CancelPenalties>
                 <CancelPenalty NonRefundable="false">
                   <Deadline AbsoluteDeadline="2019-05-08T23:59:59" OffsetDropTime="BeforeArrival" OffsetTimeUnit="Day"
@@ -226,7 +228,7 @@ The initial Search request (see above) is followed up by an multi-property Avail
                       </AcceptedPayments>
                     </GuaranteePayment>
                   </PaymentPolicies>
-                  <Total AmountAfterTax="161.10" AmountBeforeTax="152.70" CurrencyCode="EUR"/>
+                  <Total AmountAfterTax="161.10" AmountBeforeTax="152.70" CurrencyCode="EUR" DecimalPlaces="2"/>
                   <RateDescription>
                     <Text>Tarif promotionnel</Text>
                     <Text>Gratuit pour les clients HRS: Quotidien gratuit, Parking attenant à l'hôtel</Text>
@@ -312,7 +314,7 @@ The initial Search request (see above) is followed up by an multi-property Avail
                       </AcceptedPayments>
                     </GuaranteePayment>
                   </PaymentPolicies>
-                  <Total AmountAfterTax="149.00" AmountBeforeTax="141.23" CurrencyCode="EUR"/>
+                  <Total AmountAfterTax="149.00" AmountBeforeTax="141.23" CurrencyCode="EUR" DecimalPlaces="2"/>
                   <RateDescription>
                     <Text>Hot Deal</Text>
                     <Text>Gratuit pour les clients HRS: Quotidien gratuit, Parking attenant à l'hôtel</Text>
@@ -348,7 +350,7 @@ The initial Search request (see above) is followed up by an multi-property Avail
 ```
 
 
-### Search results displayed
+#### Search results displayed
 
 Search results page displaying hotels, based on Search response, and their rates, based on Availability response:
 
@@ -361,11 +363,11 @@ WIth Availability response also cancellation information comes which can be disp
 
 
 
-# Hotel Description
+#### Hotel Description
 
 ![./media/image1.png](./images/examples/5_link.png)
 
-### Request
+#### Request
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
@@ -390,7 +392,7 @@ WIth Availability response also cancellation information comes which can be disp
 </Envelope>
 ```
 
-### Response
+#### Response
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -455,12 +457,12 @@ WIth Availability response also cancellation information comes which can be disp
 ```
 
 
-### Hotel Details displayed
+#### Hotel Details displayed
 
 ![./media/image1.png](./images/examples/5_1.png)
 
 
-# Reservation
+#### Reservation
 
 ![./media/image1.png](./images/examples/4.png)
 ![./media/image1.png](./images/examples/6.png)
@@ -468,7 +470,7 @@ WIth Availability response also cancellation information comes which can be disp
 ![./media/image1.png](./images/examples/6_1.png)
 ![./media/image1.png](./images/examples/6_2.png)
 
-### Request
+#### Request
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
@@ -547,7 +549,7 @@ WIth Availability response also cancellation information comes which can be disp
 ```
 
 
-### Response
+#### Response
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -672,13 +674,13 @@ WIth Availability response also cancellation information comes which can be disp
 ```
 
 
-# Read
+#### Read
 
 ![./media/image1.png](./images/examples/7.png)
 ![./media/image1.png](./images/examples/8.png)
 ![./media/image1.png](./images/examples/9.png)
 
-### Request
+#### Request
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
@@ -702,7 +704,7 @@ WIth Availability response also cancellation information comes which can be disp
 ```
 
 
-### Response
+#### Response
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -833,17 +835,17 @@ WIth Availability response also cancellation information comes which can be disp
   </soap:Body>
 </soap:Envelope>
 ```
-### Itinerary displayed
+#### Itinerary displayed
 
 ![./media/image1.png](./images/examples/10_1.png)
 ![./media/image1.png](./images/examples/10_2.png)
 
-# Cancel
+#### Cancel
 
 ![./media/image1.png](./images/examples/12.png)
 ![./media/image1.png](./images/examples/14.png)
 
-### Request
+#### Request
 
 ```xml
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
@@ -867,7 +869,7 @@ WIth Availability response also cancellation information comes which can be disp
 ```
 
 
-### Response
+#### Response
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
