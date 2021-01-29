@@ -4,8 +4,8 @@
 
 Gets the latest hotel and air booking for a particular user.
 
-* [Retrieve the latest hotel and air booking for a particular user](#get)
-* [Schema](#schema)
+* [Retrieve the latest hotel and air booking for a particular user](#retrieve-the-latest-hotel-and-air-booking-for-a-particular-user)
+* [Schema](#latest-bookings-schema)
 
 ### Version
 3.0
@@ -21,7 +21,7 @@ Name | Type | Format | Description
 -----|------|--------|------------			
 `user`	|	`string`	|	`query`	|	The login ID of the user. The user must have the Web Services Admin (Professional) or Can Administer (Standard) user role to use this parameter.
 
-#### <a name="schema"></a>Schema
+#### <a name="schema"></a>Latest Bookings - Schema
 
 
 #### <a name="latestbooking"></a>Latest Booking

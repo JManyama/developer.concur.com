@@ -4,8 +4,8 @@
 
 Retrieves a collection of opportunities for a specified trip or for all trips that fall within a date range.
 
-* [Retrieve a collection of opportunities for a specified trip or for all trips that fall within a date range](#get)
-* [Schema](#schema)
+* [Retrieve a collection of opportunities for a specified trip or for all trips that fall within a date range](#retrieve-all-connection-requests-that-match-the-triplink-supplier-id)
+* [Schema](#opportunities-schema)
 
 ### Version
 3.0
@@ -25,7 +25,7 @@ Name | Type | Format | Description
 `toUtc`	|	`DateTime`	|	`query`	|	The To date in UTC for the date range
 
 
-#### <a name="schema"></a>Schema
+#### <a name="schema"></a>Opportunities - Schema
 
 
 #### <a name="opportunities"></a>Opportunities

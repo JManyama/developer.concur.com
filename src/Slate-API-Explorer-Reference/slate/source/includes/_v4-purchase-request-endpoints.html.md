@@ -19,7 +19,7 @@
 
 4.0
 
-#### <a name="post"></a>Purchase Request v4 - Endpoints - Create a New Purchase Request
+### <a name="post"></a>Purchase Request v4 - Endpoints - Create a New Purchase Request
 
 Create a Purchase Request based on provided header and line item details. If the request is valid it creates a purchase request and returns back a unique identifier to get the purchase request details.
 
