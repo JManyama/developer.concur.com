@@ -12,13 +12,13 @@
 <p>The Concur&#39;s <strong>user</strong> API is used to help provision and manage user accounts and profile details across multiple Concur products, including Expense, Invoice, Request, Travel and TripIt.</p>
 
 <ul>
-<li><a href="#scim">Schema Definition</a></li>
+<li><a href="#profile-v1-user-definition">Schema Definition</a></li>
 <li><a href="#get">Get User</a></li>
 <li><a href="#response">HTTP Status Codes</a></li>
 </ul>
 <h3 id='version'>Version</h3>
 <p>1.0</p>
-<h3 id='schema-definition'><a name="scim"></a>Schema Definition</h3>
+<h3 id='profile-v1-user-definition'><a name="scim"></a>Profile v1 User -  Definition</h3>
 <p>The User schema is inspired by the work from <a href="https://tools.ietf.org/wg/scim/">System for Cross-domain Identity Management (SCIM)</a>, in particular:</p>
 
 <ul>

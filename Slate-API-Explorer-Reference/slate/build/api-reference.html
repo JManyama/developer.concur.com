@@ -279,7 +279,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-159c4da0.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-5ad998ae.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-5c176cca.js"></script>
 
@@ -8655,12 +8655,12 @@ If the signature hashes match then you know the credentials are valid and the re
 <p>Concur&#39;s recommendation for suppliers is to match users requesting to connect utilizing last name and loyalty number only. Or in the case of suppliers without loyalty numbers to use verified email and the last name of the user only. The first name and middle name fields have proved to generate a high degree of failures when utilized due to issues like nicknames within the supplier systems.</p>
 
 <ul>
-<li><a href="#get">Retrieve all connection requests that match the TripLink supplier ID</a></li>
-<li><a href="#getID">Retrieve a connection request by ID</a></li>
-<li><a href="#post">Create a connection request on behalf of a specific user</a></li>
-<li><a href="#put">Update a connection request</a></li>
+<li><a href="#retrieve-all-connection-requests-that-match-the-triplink-supplier-id">Retrieve all connection requests that match the TripLink supplier ID</a></li>
+<li><a href="#retrieve-a-connection-request-by-id">Retrieve a connection request by ID</a></li>
+<li><a href="#create-a-connection-request-on-behalf-of-a-specific-user">Create a connection request on behalf of a specific user</a></li>
+<li><a href="#update-a-connection-request">Update a connection request</a></li>
 <li><a href="#schema32">Schema 3.2</a></li>
-<li><a href="#schema">Schema 3.0 (deprecated)</a></li>
+<li><a href="#schema-3-0-deprecated">Schema 3.0 (deprecated)</a></li>
 <li><p><a href="#schema31">Schema 3.1 (deprecated)</a></p></li>
 <li><p>Connection Requests v3.0 is deprecated.</p></li>
 <li><p>Connection Requests v3.1 is deprecated.</p></li>
@@ -9723,16 +9723,16 @@ Content-Type: application/xml
 <li><a href="#get-file">Get an extract file or files</a></li>
 </ol>
 <h2 id='lists-v3'>Lists v3</h2>
-<p>The Lists API allows you to view your configured lists within SAP Concur products, and create new lists. The lists are shared between multiple SAP Concur products. Use the <a href="/api-reference/common/list-item/v3.list-item.html">List Items API</a> to manage the items in the lists.</p>
+<p>The Lists API allows you to view your configured lists within SAP Concur products, and create new lists. The lists are shared between multiple SAP Concur products. Use the <a href="#list-item-v3">List Items API</a> to manage the items in the lists.</p>
 
 <ul>
-<li><a href="#products-editions">Products and Editions</a></li>
-<li><a href="#scope-usage">Scope Usage</a></li>
-<li><a href="#get">Get All Lists</a></li>
-<li><a href="#post">Create a New List</a></li>
+<li><a href="#lists-v3-products-and-editions">Products and Editions</a></li>
+<li><a href="#lists-v3-scope-usage">Scope Usage</a></li>
+<li><a href="#lists-v3-get-all-lists">Get All Lists</a></li>
+<li><a href="#lists-v3-create-a-new-list">Create a New List</a></li>
 <li><a href="#get-2">Get a Single List by ID</a></li>
-<li><a href="#put">Update List</a> <strong>Deprecated</strong></li>
-<li><a href="#schema">Schema</a>
+<li><a href="#lists-v3-update-list">Update List</a> <strong>Deprecated</strong></li>
+<li><a href="#lists-v3-schema">Schema</a>
 
 <ul>
 <li><a href="#create-response">CreateResponse</a></li>
@@ -9742,7 +9742,7 @@ Content-Type: application/xml
 <li><a href="#list-put">ListPut</a></li>
 </ul></li>
 </ul>
-<h4 id='products-and-editions'><a name="products-editions"></a>Products and Editions</h4>
+<h4 id='lists-v3-products-and-editions'><a name="products-editions"></a>Lists v3 - Products and Editions</h4>
 <ul>
 <li>Concur Expense Professional Edition</li>
 <li>Concur Expense Standard Edition</li>
@@ -9751,7 +9751,7 @@ Content-Type: application/xml
 <li>Concur Request Professional Edition</li>
 <li>Concur Request Standard Edition</li>
 </ul>
-<h4 id='scope-usage'><a name="scope-usage"></a>Scope Usage</h4>
+<h4 id='lists-v3-scope-usage'><a name="scope-usage"></a>Lists v3 - Scope Usage</h4>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -9765,7 +9765,7 @@ Content-Type: application/xml
 <td>GET, POST</td>
 </tr>
 </tbody></table>
-<h4 id='get-all-lists'><a name="get"></a>Get All Lists</h4>
+<h4 id='lists-v3-get-all-lists'><a name="get"></a>Lists v3 - Get All Lists</h4>
 <p>Returns all lists based on the search criteria.</p>
 <h4 id='parameters'>Parameters</h4>
 <table><thead>
@@ -9823,7 +9823,7 @@ Content-Type: application/xml
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"NextPage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h4 id='create-a-new-list'><a name="post"></a>Create a New List</h4>
+</span></code></pre></div><h4 id='lists-v3-create-a-new-list'><a name="post"></a>Lists v3 - Create a New List</h4>
 <p>Creates a new list.</p>
 <h4 id='parameters-2'>Parameters</h4>
 <table><thead>
@@ -9928,7 +9928,7 @@ Content-Type: application/xml
   </span><span class="nl">"SearchCriteriaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h4 id='update-list'><a name="put"></a>Update List</h4>
+</span></code></pre></div><h4 id='lists-v3-update-list'><a name="put"></a>Lists v3 - Update List</h4>
 <blockquote>
 <p><strong>DEPRECATED</strong>: 05/19/2016 UNSUPPORTED: 11/19/2016. Updates list specified in the URL. Only the fields provided in the supplied object will be updated, missing fields will not be altered.</p>
 </blockquote>
@@ -9982,7 +9982,7 @@ Content-Type: application/xml
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
 <span class="p">});</span>
 
-</code></pre></div><h3 id='schema'><a name="schema"></a>Schema</h3><h4 id='createresponse'><a name="create-response"></a>CreateResponse</h4>
+</code></pre></div><h3 id='lists-v3-schema'><a name="schema"></a>Lists v3 - Schema</h3><h4 id='createresponse'><a name="create-response"></a>CreateResponse</h4>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -10162,12 +10162,12 @@ Content-Type: application/xml
 <p>The SAP Concur List Item API provides an automated solution to clients who would like to add, update, or delete list items. Use of the API is subject to some limitations on the volume of List data. You may need to manage the initial load of large volumes of data via a file import due to capacity limitations. This is also true if ongoing maintenance of List values involves a large volume. </p>
 
 <ul>
-<li><a href="#get">Retrieve all list items based on the search criteria</a></li>
-<li><a href="#getID">Retrieve a list item by ID</a></li>
-<li><a href="#post">Create a new list item</a></li>
-<li><a href="#put">Update a list item</a></li>
-<li><a href="#delete">Delete a list item</a></li>
-<li><a href="#schema">Schema</a></li>
+<li><a href="#retrieve-all-list-items-based-on-the-search-criteria">Retrieve all list items based on the search criteria</a></li>
+<li><a href="#retrieve-a-list-item-by-id">Retrieve a list item by ID</a></li>
+<li><a href="#create-a-new-list-item">Create a new list item</a></li>
+<li><a href="#update-a-list-item">Update a list item</a></li>
+<li><a href="#delete-a-list-item">Delete a list item</a></li>
+<li><a href="#list-item-v3-schema">Schema</a></li>
 </ul>
 <h4 id='version'>Version</h4>
 <p>3.0</p>
@@ -10360,7 +10360,7 @@ Content-Type: application/xml
 <td><strong>Required</strong> The unique identifier of the list associated with a listitem to be deleted</td>
 </tr>
 </tbody></table>
-<h4 id='schema'><a name="schema"></a>Schema</h4><h3 id='list-items'><a name="listitems"></a>List Items</h3>
+<h4 id='list-item-v3-schema'><a name="schema"></a>List Item v3 - Schema</h4><h3 id='list-items'><a name="listitems"></a>List Items</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -10486,9 +10486,9 @@ Content-Type: application/xml
 <p>Gets details of locations that are used by Concur and that are valid at the user&#39;s company.</p>
 
 <ul>
-<li><a href="#get">Retrieve details of locations that are used by Concur and that are valid at the user&#39;s company</a></li>
-<li><a href="#getID">Retrieve details of a specified location</a></li>
-<li><a href="#schema">Schema</a></li>
+<li><a href="#retrieve-details-of-locations-that-are-used-by-concur-and-that-are-valid-at-the-user-39-s-company">Retrieve details of locations that are used by Concur and that are valid at the user&#39;s company</a></li>
+<li><a href="#retrieve-details-of-a-specified-location">Retrieve details of a specified location</a></li>
+<li><a href="#locations-v3-schema">Schema</a></li>
 </ul>
 
 <p>Location v1.1 has been deprecated and can be found <a href="#v1dot1.locations">here</a>.</p>
@@ -10562,7 +10562,7 @@ Content-Type: application/xml
 <td><strong>Required</strong> The ID of the location.</td>
 </tr>
 </tbody></table>
-<h4 id='schema'><a name="schema"></a>Schema</h4><h4 id='locations'><a name="locations"></a>Locations</h4>
+<h4 id='locations-v3-schema'><a name="schema"></a>Locations v3 - Schema</h4><h4 id='locations'><a name="locations"></a>Locations</h4>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -10664,9 +10664,9 @@ Content-Type: application/xml
 <p>Supplier companies provide travel services to users. The Suppliers resource can be used to retrieve information about suppliers.</p>
 
 <ul>
-<li><a href="#get">Retrieve all suppliers based on search criteria</a></li>
-<li><a href="#getID">Retrieve a single supplier by ID</a></li>
-<li><a href="#schema">Schema</a></li>
+<li><a href="#retrieve-all-suppliers-based-on-search-criteria">Retrieve all suppliers based on search criteria</a></li>
+<li><a href="#retrieve-a-single-supplier-by-id">Retrieve a single supplier by ID</a></li>
+<li><a href="#suppliers-v3-schema">Schema</a></li>
 </ul>
 <h4 id='retrieve-all-suppliers-based-on-search-criteria'><a name="get"></a>Retrieve all suppliers based on search criteria</h4>
 <p>GET  /api/v3.0/common/suppliers/</p>
@@ -10782,7 +10782,7 @@ Content-Type: application/xml
 <td><strong>Required</strong> Supplier ID.</td>
 </tr>
 </tbody></table>
-<h4 id='schema'><a name="schema"></a>Schema</h4><h4 id='suppliers'><a name="suppliers"></a>Suppliers</h4>
+<h4 id='suppliers-v3-schema'><a name="schema"></a>Suppliers v3 - Schema</h4><h4 id='suppliers'><a name="suppliers"></a>Suppliers</h4>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -69514,13 +69514,13 @@ Content-Type: application/xml
 <p>The Concur&#39;s <strong>user</strong> API is used to help provision and manage user accounts and profile details across multiple Concur products, including Expense, Invoice, Request, Travel and TripIt.</p>
 
 <ul>
-<li><a href="#scim">Schema Definition</a></li>
+<li><a href="#profile-v1-user-definition">Schema Definition</a></li>
 <li><a href="#get">Get User</a></li>
 <li><a href="#response">HTTP Status Codes</a></li>
 </ul>
 <h3 id='version'>Version</h3>
 <p>1.0</p>
-<h3 id='schema-definition'><a name="scim"></a>Schema Definition</h3>
+<h3 id='profile-v1-user-definition'><a name="scim"></a>Profile v1 User -  Definition</h3>
 <p>The User schema is inspired by the work from <a href="https://tools.ietf.org/wg/scim/">System for Cross-domain Identity Management (SCIM)</a>, in particular:</p>
 
 <ul>
