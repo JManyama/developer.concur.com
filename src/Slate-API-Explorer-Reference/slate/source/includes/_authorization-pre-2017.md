@@ -3,10 +3,11 @@
 
 
 ### Authentication 
+<div id="attn-depr">
+<p>This API has been deprecated.</p>
 
-This API has been deprecated.
-
-Deprecation Date: 02/04/2017
+<p>Deprecation Date: 02/04/2017</p>
+</div>
 
 If you are a new partner or an existing one creating a new app, please refer to the [new authentication version documentation](#getting-started).
 
