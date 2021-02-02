@@ -17,7 +17,7 @@ A post reservation sell request is sent when a Travel user attempts to book a gr
 	* [Vehicle](#vehicle-schema)
 	* [Vendor](#vendor-schema)
 	* [Form of Payment](#form-payment)
-	* [Reply Credit Card](#reply-credit-card-elements)
+	* [Reply Credit Card](#post-a-reservation-sell-request-reply-credit-card-elements)
   * [Response Example](#post-a-reservation-sell-request-xml-example-of-successful-response)
 
 #### <a name="request"></a>Post A Reservation Sell Request - Request
@@ -256,7 +256,7 @@ The train information. This parent element contains the following child elements
 * DepartureDateTime:	The train arrival time. Only provided for the PickupLocation element. **Format:** 2015-05-19T18:00:00
 
 
-#### <a name="credit-card"></a>Credit Card Elements
+#### <a name="credit-card"></a>Post A Reservation Sell Request - Credit Card Elements
 
 #### Type
 The card type.
