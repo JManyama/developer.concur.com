@@ -11021,19 +11021,19 @@ Content-Type: application/xml
 <p><strong>NOTE</strong>: This direct connect was originally designed to work with Limo providers, but can support all types of ground transportation.</p>
 
 <ul>
-<li><a href="#products-editions">Products and Editions</a></li>
-<li><a href="#product-restrictions">Product Restrictions</a></li>
+<li><a href="#ground-transportation-products-and-editions">Products and Editions</a></li>
+<li><a href="#ground-transportation-product-restrictions">Product Restrictions</a></li>
 <li><a href="#config-process">Configuration Process</a></li>
-<li><a href="#authentication">Authentication</a></li>
+<li><a href="#ground-transportation-authentication">Authentication</a></li>
 <li><a href="#operations">Operations</a></li>
 <li><a href="#gds-sell-formats">GDS Sell Formats</a></li>
 </ul>
-<h3 id='products-and-editions'><a name="products-editions"></a>Products and Editions</h3>
+<h3 id='ground-transportation-products-and-editions'><a name="products-editions"></a>Ground Transportation - Products and Editions</h3>
 <ul>
 <li>Concur Travel Professional Edition</li>
 <li>Concur Travel Standard Edition</li>
 </ul>
-<h4 id='product-restrictions'><a name="product-restrictions"></a>Product Restrictions</h4>
+<h4 id='ground-transportation-product-restrictions'><a name="product-restrictions"></a>Ground Transportation - Product Restrictions</h4>
 <p>This direct connect is only available to Travel Suppliers with Ground Transportation inventory. This direct connect is not supported in the SAP Concur mobile application.</p>
 
 <p>SAP Concur products are highly configurable, and not all clients will have access to all features.</p>
@@ -11069,7 +11069,7 @@ Content-Type: application/xml
 <li>Update the Ground Transportation Reservation with the Supplier</li>
 <li>Update the Ground Transportation Reservation with Travel</li>
 </ul>
-<h4 id='authentication'><a name="authentication"></a>Authentication</h4>
+<h4 id='ground-transportation-authentication'><a name="authentication"></a>Ground Transportation - Authentication</h4>
 <p>Authentication between SAP Concur and the application connector is performed using OAuth.</p>
 <h4 id='operations'><a name="operations"></a>Operations</h4>
 <p><a href="#cancel-a-reservation">Cancel Reservation</a></p>
@@ -11102,13 +11102,13 @@ TUR ZM AK1  SEA 15DEC-/FALCON DES-TEL 8666932526/RATE-50.00 HOURLY-2 HR MIN/CON
 <p>The Cancel Reservation operation is sent to the supplier to cancel a travel reservation on behalf of a user. The Ground Transportation direct connect sends the relevant information to a URI that the travel supplier maintains.  The standard location is: <code>https://{servername}/concur/groundtransportation</code>. This URI is configured by the supplier when registering the partner application.</p>
 
 <ul>
-<li><a href="#res-schema">Response Schema</a>
+<li><a href="#cancel-a-reservation-response-schema">Response Schema</a>
 
 <ul>
 <li><a href="#rate-info">Rate Information</a></li>
 <li><a href="#reply-credit-card">Reply Credit Card</a></li>
 </ul></li>
-<li><a href="#example">Example</a></li>
+<li><a href="#cancel-a-reservation-example-of-successful-response">Example</a></li>
 </ul>
 <h4 id='request'>Request</h4><h4 id='uri'>URI</h4>
 <p><code>/concur/groundtransportation</code></p>
@@ -11155,7 +11155,7 @@ TUR ZM AK1  SEA 15DEC-/FALCON DES-TEL 8666932526/RATE-50.00 HOURLY-2 HR MIN/CON
 <ul>
 <li>application/xml</li>
 </ul>
-<h4 id='response-schema'><a name="res-schema"></a>Response Schema</h4>
+<h4 id='cancel-a-reservation-response-schema'><a name="res-schema"></a>Cancel A Reservation - Response Schema</h4>
 <p>The response will include a CC_LimoCancelReply parent element, with the following child elements:</p>
 
 <table><thead>
@@ -11429,7 +11429,7 @@ TUR ZM AK1  SEA 15DEC-/FALCON DES-TEL 8666932526/RATE-50.00 HOURLY-2 HR MIN/CON
 <td>The card expiration date. Format: 2013-02-19</td>
 </tr>
 </tbody></table>
-<h4 id='example-of-successful-response'><a name="example"></a>Example of Successful Response</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="k">HTTPS</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<h4 id='cancel-a-reservation-example-of-successful-response'><a name="example"></a>Cancel A Reservation - Example of Successful Response</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="k">HTTPS</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/xml</span>
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">{length of content body}</span>
 
@@ -11576,24 +11576,24 @@ TUR ZM AK1  SEA 15DEC-/FALCON DES-TEL 8666932526/RATE-50.00 HOURLY-2 HR MIN/CON
 <span class="nt">&lt;/CC_LimoCancelReply&gt;</span>
 </code></pre></div><h2 id='post-a-reservation-detail-search'>Post a reservation detail search</h2>
 <ul>
-<li><a href="#res-schema">Response Schema</a>
+<li><a href="#post-a-reservation-detail-search-response-schema">Response Schema</a>
 
 <ul>
-<li><a href="#error">Error</a></li>
+<li><a href="#error-child-elements">Error</a></li>
 <li><a href="#primary-passenger-child">Primary Passenger Child</a></li>
 <li><a href="#pickup-location">Pickup Location</a></li>
 <li><a href="#dropoff-location">Dropoff Location</a></li>
 <li><a href="#vehicle-child">Vehicle Child</a></li>
 <li><a href="#vendor-child">Vendor Child</a></li>
 <li><a href="#form-payment-child">Form of Payment Child</a></li>
-<li><a href="#rate-info">Rate Information</a></li>
-<li><a href="#reply-credit-card">Reply Credit Card</a></li>
+<li><a href="#post-a-reservation-rate-information-elements">Rate Information</a></li>
+<li><a href="#post-a-reservation-reply-credit-card-elements">Reply Credit Card</a></li>
 <li><a href="#airport">Airport</a></li>
 <li><a href="#flight-child">Flight Child</a></li>
 <li><a href="#train-station">Train Station</a></li>
 <li><a href="#train-child">Train Child</a></li>
 </ul></li>
-<li><a href="#example">Example</a></li>
+<li><a href="#post-reservation-xml-example-of-successful-response">Example</a></li>
 </ul>
 <h4 id='request'>Request</h4>
 <p>The following request is sent to the supplier when the Travel user selects a ground transportation reservation to get additional details.</p>
@@ -11636,7 +11636,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <p>The supplier responds to the request by supplying the full reservation details.</p>
 <h4 id='content-type'>Content Type</h4>
 <p>application/xml</p>
-<h4 id='response-schema'><a name="res-schema"></a>Response Schema</h4>
+<h4 id='post-a-reservation-detail-search-response-schema'><a name="res-schema"></a>Post a reservation detail search - Response Schema</h4>
 <p>The response will include a CC_LimoReservationDetailReply parent element, with the following child elements:</p>
 
 <table><thead>
@@ -12126,7 +12126,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>If present, the passenger will pay through direct billing.</td>
 </tr>
 </tbody></table>
-<h4 id='rate-information-elements'><a name="rate-info"></a>Rate Information Elements</h4>
+<h4 id='post-a-reservation-rate-information-elements'><a name="rate-info"></a>Post a reservation - Rate Information Elements</h4>
 <table><thead>
 <tr>
 <th>Element Name</th>
@@ -12232,7 +12232,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>The charge for each additional hour.</td>
 </tr>
 </tbody></table>
-<h4 id='reply-credit-card-elements'><a name="reply-credit-card"></a>Reply Credit Card Elements</h4>
+<h4 id='post-a-reservation-reply-credit-card-elements'><a name="reply-credit-card"></a>Post a reservation - Reply Credit Card Elements</h4>
 <table><thead>
 <tr>
 <th>Element Name</th>
@@ -12396,7 +12396,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>The train departure time. Only provided for the DropoffLocation element. Format: 2015-05-19T18:00:00</td>
 </tr>
 </tbody></table>
-<h4 id='xml-example-of-successful-response'><a name="example"></a>XML Example of Successful Response</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>HTTPS/1.1 200 OK
+<h4 id='post-reservation-xml-example-of-successful-response'><a name="example"></a>Post Reservation - XML Example of Successful Response</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>HTTPS/1.1 200 OK
 Content-Type: application/xml
 Content-Length: <span class="o">{</span>length of content body<span class="o">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;CC_LimoReservationDetailReply&gt;</span>
@@ -12544,30 +12544,30 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <p>A post reservation sell request is sent when a Travel user attempts to book a ground transportation reservation.</p>
 
 <ul>
-<li><a href="#request">Request</a>
+<li><a href="#post-a-reservation-sell-request-request">Request</a>
 
 <ul>
-<li><a href="#req-schema">Request Schema</a></li>
-<li><a href="#airport">Airport</a></li>
-<li><a href="#train-station">Train Station</a></li>
+<li><a href="#post-reservation-request-body">Request Schema</a></li>
+<li><a href="#post-reservation-airport-elements">Airport</a></li>
+<li><a href="#post-reservation-train-station-elements">Train Station</a></li>
 <li><a href="#credit-card">Credit Card</a></li>
-<li><a href="#req-example">Request Example</a></li>
+<li><a href="#post-a-reservation-sell-xml-example-request">Request Example</a></li>
 </ul></li>
-<li><a href="#response">Response</a>
+<li><a href="#post-reservation-response">Response</a>
 
 <ul>
-<li><a href="#res-schema">Response Schema</a></li>
-<li><a href="#error">Error</a></li>
+<li><a href="#post-reservation-content-body">Response Schema</a></li>
+<li><a href="#post-a-reservation-sell-request-error-elements">Error</a></li>
 <li><a href="#primary-passenger">Primary Passenger</a></li>
-<li><a href="#rate-info">Rate Information</a></li>
+<li><a href="#post-reservation-rate-information-elements">Rate Information</a></li>
 <li><a href="#vehicle-schema">Vehicle</a></li>
 <li><a href="#vendor-schema">Vendor</a></li>
 <li><a href="#form-payment">Form of Payment</a></li>
-<li><a href="#reply-credit-card">Reply Credit Card</a></li>
-<li><a href="#res-example">Response Example</a></li>
+<li><a href="#reply-credit-card-elements">Reply Credit Card</a></li>
+<li><a href="#post-a-reservation-sell-request-xml-example-of-successful-response">Response Example</a></li>
 </ul></li>
 </ul>
-<h4 id='request'><a name="request"></a>Request</h4><h4 id='supported-accept-types'>Supported Accept Types</h4>
+<h4 id='post-a-reservation-sell-request-request'><a name="request"></a>Post A Reservation Sell Request - Request</h4><h4 id='supported-accept-types'>Supported Accept Types</h4>
 <p>application/xml</p>
 <h4 id='request-uri'>Request URI</h4>
 <p>The Ground Transportation direct connect sends the relevant information to a URI that the travel supplier maintains. The standard location is:</p>
@@ -12579,7 +12579,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <p>Authentication header with Base64 encoded basic authentication credentials (login ID and password) is required. The basic authentication credentials are established during the application review process.</p>
 
 <p>Authorization: Basic {Base64 encoded LoginID:Password}</p>
-<h4 id='request-body'><a name="req-schema"></a>Request Body</h4>
+<h4 id='post-reservation-request-body'><a name="req-schema"></a>Post Reservation - Request Body</h4>
 <p>The request will contain a <strong>CC_LimoSellRequest</strong> parent element, containing the following child elements.</p>
 <h4 id='corporateclient'>CorporateClient</h4>
 <p>The corporate client the booking is on behalf of. This parent element contains the following child element:</p>
@@ -12766,7 +12766,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <p>The details of the extra stop arrangement, if available.</p>
 <h4 id='requesteddriver-2'>RequestedDriver</h4>
 <p>The name of the requested driver, if available.</p>
-<h4 id='airport-elements'><a name="airport"></a>Airport Elements</h4><h4 id='airportcode'>AirportCode</h4>
+<h4 id='post-reservation-airport-elements'><a name="airport"></a>Post Reservation - Airport Elements</h4><h4 id='airportcode'>AirportCode</h4>
 <p>The IATA code for the airport.</p>
 
 <p>Flight: The flight information. This parent element contains the following child elements:
@@ -12774,7 +12774,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 * FlightNumber: The flight number.
 * ArrivalDateTime:  The flight arrival time. Only provided for the PickupLocation element. <strong>Format:</strong> 2015-05-19T18:00:00
 * DepartureDateTime:    The flight departure time. Only provided for the DropoffLocation element. <strong>Format:</strong> 2015-05-19T18:00:00</p>
-<h4 id='train-station-elements'><a name="train-station"></a>Train Station Elements</h4><h4 id='stationcode'>StationCode</h4>
+<h4 id='post-reservation-train-station-elements'><a name="train-station"></a>Post Reservation - Train Station Elements</h4><h4 id='stationcode'>StationCode</h4>
 <p>The station code.</p>
 <h4 id='stationname'>StationName</h4>
 <p>The name of the station.</p>
@@ -12810,7 +12810,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <p>The country of the billing address of the car.</p>
 <h4 id='postalcode'>PostalCode</h4>
 <p>The postal code of the billing address of the car.</p>
-<h4 id='xml-example-request'><a name="req-example"></a>XML Example Request</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/concur/groundtransportation</span> <span class="k">HTTPS</span><span class="o">/</span><span class="m">1.1</span>
+<h4 id='post-a-reservation-sell-xml-example-request'><a name="req-example"></a>Post A Reservation Sell - XML Example Request</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/concur/groundtransportation</span> <span class="k">HTTPS</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">example.com</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Basic ...</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/xml</span>
@@ -12880,11 +12880,11 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
       <span class="nt">&lt;AccountingField5/&gt;</span>
   <span class="nt">&lt;/AccountingInfo&gt;</span>
 <span class="nt">&lt;/CC_LimoSellRequest&gt;</span>
-</code></pre></div><h4 id='response'><a name="response"></a>Response</h4>
+</code></pre></div><h4 id='post-reservation-response'><a name="response"></a>Post Reservation - Response</h4>
 <p>The supplier responds to the Sell request by returning the details of the booked reservation.</p>
 <h4 id='supported-content-types'>Supported Content Types</h4>
 <p>application/xml</p>
-<h4 id='content-body'><a name="res-schema"></a>Content Body</h4>
+<h4 id='post-reservation-content-body'><a name="res-schema"></a>Post Reservation - Content Body</h4>
 <p>The response will include a <strong>CC_LimoSellReply</strong> parent element, with the following child elements:</p>
 
 <table><thead>
@@ -13045,7 +13045,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>The accounting information for the reservation. This parent element contains one or more <strong>AccountingField</strong> elements: <strong>AccountingField1</strong> through <strong>AccountingField5</strong>. These fields contain detailed accounting information.</td>
 </tr>
 </tbody></table>
-<h4 id='error-elements'><a name="error"></a>Error Elements</h4>
+<h4 id='post-a-reservation-sell-request-error-elements'><a name="error"></a>Post A Reservation Sell Request - Error Elements</h4>
 <table><thead>
 <tr>
 <th>Element</th>
@@ -13097,7 +13097,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>The contact&#39;s email address.</td>
 </tr>
 </tbody></table>
-<h4 id='rate-information-elements'><a name="rate-info"></a>Rate Information Elements</h4>
+<h4 id='post-reservation-rate-information-elements'><a name="rate-info"></a>Post Reservation - Rate Information Elements</h4>
 <table><thead>
 <tr>
 <th>Element Name</th>
@@ -13263,7 +13263,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>If present, the passenger will pay through direct billing.</td>
 </tr>
 </tbody></table>
-<h4 id='reply-credit-card-elements'><a name="reply-credit-card"></a>Reply Credit Card Elements</h4>
+<h4 id='post-a-reservation-reply-credit-card-elements'><a name="reply-credit-card"></a>Post a reservation - Reply Credit Card Elements</h4>
 <table><thead>
 <tr>
 <th>Element Name</th>
@@ -13287,7 +13287,7 @@ Content-Length: <span class="o">{</span>length of content body<span class="o">}<
 <td>The card expiration date. Format: 2013-02-19</td>
 </tr>
 </tbody></table>
-<h4 id='xml-example-of-successful-response'><a name="res-example"></a>XML Example of Successful Response</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="k">HTTPS</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<h4 id='post-a-reservation-sell-request-xml-example-of-successful-response'><a name="res-example"></a>Post A Reservation Sell Request - XML Example of Successful Response</h4><div class="highlight"><pre class="highlight http tab-http"><code><span class="k">HTTPS</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/xml</span>
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">{length of content body}</span>
 
