@@ -17,7 +17,7 @@ A post reservation sell request is sent when a Travel user attempts to book a gr
 	* [Vehicle](#vehicle-schema)
 	* [Vendor](#vendor-schema)
 	* [Form of Payment](#form-payment)
-	* [Reply Credit Card](#post-a-reservation-sell-request-reply-credit-card-elements)
+	* [Reply Credit Card](#post-a-reservation-sell-request-credit-card-elements)
   * [Response Example](#post-a-reservation-sell-request-xml-example-of-successful-response)
 
 #### <a name="request"></a>Post A Reservation Sell Request - Request

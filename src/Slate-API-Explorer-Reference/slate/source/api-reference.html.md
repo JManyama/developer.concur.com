@@ -38,7 +38,6 @@ includes:
   - post-reservation-sell
   - post-transportation-search
   - update-reservation-supplier
-  - update-reservation-travel
   - Introduction
   - Use-cases
   - Headers
