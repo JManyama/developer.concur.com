@@ -279,7 +279,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-5ad998ae.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-f56d5048.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-5c176cca.js"></script>
 
@@ -15327,8 +15327,8 @@ zh-tw: Traditional Chinese</p>
 </ul>
 <h3 id='contents'>Contents</h3>
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#product-restrictions">Product Restrictions</a></li>
+<li><a href="#introduction">Overview</a></li>
+<li><a href="#introduction-product-restrictions">Product Restrictions</a></li>
 <li><a href="#supported-ops">Supported Operations</a></li>
 <li><a href="#nonfunctional-requirements">Non-Functional Requirements</a>
 
@@ -15336,7 +15336,7 @@ zh-tw: Traditional Chinese</p>
 <li><a href="#response-times">Response Times</a></li>
 <li><a href="#emergency-tech-contact">Emergency Technical Contact</a></li>
 <li><a href="#testing-enviro">Testing Environment</a></li>
-<li><a href="#security">Security</a></li>
+<li><a href="#introduction-security">Security</a></li>
 </ul></li>
 <li><a href="#urls">URLs</a></li>
 <li><a href="#handling-html">Handling of HTML</a></li>
@@ -15347,7 +15347,7 @@ zh-tw: Traditional Chinese</p>
 <li><a href="#responses">Responses</a></li>
 </ul></li>
 </ul>
-<h3 id='product-restrictions'><a name="product-restrictions"></a>Product Restrictions</h3>
+<h3 id='introduction-product-restrictions'><a name="product-restrictions"></a>Introduction - Product Restrictions</h3>
 <p>Hotel Service 2 API inventory is not accessible from the SAP Concur mobile app. SAP Concur products are highly configurable, and not all clients will have access to all features.</p>
 <h3 id='supported-operations'><a name="supported-ops"></a>Supported Operations</h3>
 <ul>
@@ -15365,7 +15365,7 @@ zh-tw: Traditional Chinese</p>
 <p>The Hotel supplier needs to provide emergency technical contact email that will be used for communication in case of blocking technical issues.</p>
 <h3 id='testing-environment'><a name="testing-enviro"></a>Testing Environment</h3>
 <p>To allow SAP Concur performing testing, the Hotel Supplier needs to provide testing URL or specify properties for testing in production URL. SAP Concur needs to be able to perform test bookings with testing credit cards.</p>
-<h3 id='security'><a name="security"></a>Security</h3><h4 id='pci-dss-compliance'>PCI DSS Compliance</h4>
+<h3 id='introduction-security'><a name="security"></a>Introduction - Security</h3><h4 id='pci-dss-compliance'>PCI DSS Compliance</h4>
 <p>As sensitive data and payment card details are transferred via API, the Hotel Suppliers need to comply with PCI DSS standard. SAP Concur is compliant with PCI DSS standard and undergoes regular security audits.</p>
 <h4 id='https'>HTTPS</h4>
 <p>SAP Concur requires TLS 1.2 (Transport Layer Security) SSL protocol for file transfers. The Hotel Supplier will provide SAP Concur HTTPS URL of its end-point. Standard HTTPS port 443 should be used.</p>
@@ -15455,7 +15455,7 @@ The hotel suppliers should not use XML special characters - predefined entities:
 <li><a href="#http">HTTP Headers</a>
 
 <ul>
-<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#http-headers-troubleshooting">Troubleshooting</a></li>
 </ul></li>
 <li><a href="#soap">Soap Header</a></li>
 <li><a href="#ota-message">OTA Message Headers</a>
@@ -15550,7 +15550,7 @@ The hotel suppliers should not use XML special characters - predefined entities:
 <td>Used to perform Cancel</td>
 </tr>
 </tbody></table>
-<h3 id='troubleshooting'><a name="troubleshooting"></a>Troubleshooting</h3>
+<h3 id='http-headers-troubleshooting'><a name="troubleshooting"></a>HTTP Headers - Troubleshooting</h3>
 <p>In order to assist with troubleshooting, SAP Concur provides a unique correlationId in the request header. The key to look for is <code>correlationid</code>. This unique code can be used during troubleshooting as it identifies the API call in the log files. You should record this information in your own API call logs as well so that you can pass this information on to the SAP Concur support team.</p>
 
 <p>Example HTTP Header from network capture:</p>
@@ -19582,7 +19582,7 @@ Currently OTA Warnings are not supported and will be ignored.</p>
 </tbody></table>
 
 <hr>
-<h3 id='response'><a name="response"></a>Response</h3>
+<h3 id='reservation-response'><a name="response"></a>Reservation - Response</h3>
 <p>The maximum allowed size of <code>OTA_HotelResRS</code> is 150 KB. Any response that exceeds this limit shall be dropped.</p>
 <div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;SOAP-ENV:Header</span> <span class="na">xmlns:SOAP-ENV=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span><span class="nt">/&gt;</span>
@@ -34639,12 +34639,12 @@ Content-Length: 405
 <p>Retrieves a collection of opportunities for a specified trip or for all trips that fall within a date range.</p>
 
 <ul>
-<li><a href="#retrieve-all-connection-requests-that-match-the-triplink-supplier-id">Retrieve a collection of opportunities for a specified trip or for all trips that fall within a date range</a></li>
+<li><a href="#retrieve-connection-requests-that-match-the-triplink-supplier-id">Retrieve a collection of opportunities for a specified trip or for all trips that fall within a date range</a></li>
 <li><a href="#opportunities-schema">Schema</a></li>
 </ul>
 <h3 id='version'>Version</h3>
 <p>3.0</p>
-<h4 id='retrieve-all-connection-requests-that-match-the-triplink-supplier-id'><a name="get"></a>Retrieve all connection requests that match the TripLink supplier ID</h4>
+<h4 id='retrieve-connection-requests-that-match-the-triplink-supplier-id'><a name="get"></a>Retrieve connection requests that match the TripLink supplier ID</h4>
 <p>GET  https://www.concursolutions.com/api/v3.0/insights/opportunities</p>
 <h4 id='parameters'>Parameters</h4>
 <table><thead>
@@ -36408,7 +36408,7 @@ Content-Type: application/json
 <li><a href="#purchase-orders-v3-access-token-usage">Access Token Usage</a></li>
 <li><a href="#create-a-new-purchase-order">Create a New Purchase Order</a></li>
 <li><a href="#put-receipts">Update Purchase Order Line Item with Receipt Information</a></li>
-<li><a href="#update-an-existing-purchase-order">Update an Existing Purchase Order</a></li>
+<li><a href="#purchase-orders-v3-update-an-existing-purchase-order">Update an Existing Purchase Order</a></li>
 <li><a href="#purchase-orders-v3-get-an-existing-purchase-order">Get an Existing Purchase Order</a></li>
 <li><a href="#purchase-orders-v3-schema">Schema</a></li>
 <li><a href="#schema-response">Response Schema</a></li>
@@ -37318,7 +37318,7 @@ Content-Type: application/json
 <li><a href="#retrieve-a-company-access-token">Retrieve a Company Access Token</a></li>
 <li><a href="#retrieve-a-user-access-token">Retrieve a User Access Token</a></li>
 </ul></li>
-<li><a href="#purchase-request-v4-endpoints">Purchase Request API Endpoints</a></li>
+<li><a href="#create-a-new-purchase-request">Purchase Request API Endpoints</a></li>
 </ul>
 <h3 id='purchase-request-v4-get-started-regional-availability'>Purchase Request v4 - Get Started - Regional Availability</h3><div class="highlight"><pre class="highlight plaintext"><code>https://us.api.concursolutions.com/purchaserequest/v4/
 </code></pre></div><div class="highlight"><pre class="highlight plaintext"><code>https://emea.api.concursolutions.com/purchaserequest/v4/
