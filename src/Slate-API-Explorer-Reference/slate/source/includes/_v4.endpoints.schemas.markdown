@@ -48,7 +48,6 @@
 * [Vendor](#schema-vendor)
 
 ### <a name="schema-request"></a>Request
-
 Name|Type|Format|Description
 ---|---|---|---
 `approvalLimitDate`|`timestamp`|[RFC 3339] `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`|The date by which the Request must be approved. This element appears only when integrated with Concur Travel.
