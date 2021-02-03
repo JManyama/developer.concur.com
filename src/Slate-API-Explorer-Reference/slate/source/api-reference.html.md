@@ -94,6 +94,14 @@ includes:
   - v1-image
   - v3-image
   - v4-get-started
+  - v4.endpoints.request-resources
+  - v4.endpoints.workflow-resources
+  - v4.endpoints.expected-expense-resources
+  - v4.endpoints.cashadvance-resources
+  - v4.endpoints.policy-resources
+  - v4.endpoints.travel-agency-resources
+  - v4.endpoints.schemas
+  - v4.response-codes
   - v2-profile-service
   - v2-profile-resource
   - v1-loyalty-program-resource
@@ -119,6 +127,10 @@ includes:
   - v1.user
   - v1.getting-started
   - v1dot1.locations
+  - v1.notification-user-resource
+  - v1.notification-company-resource
+  - v3.request
+  - trip-approval-resource
 
 
   
