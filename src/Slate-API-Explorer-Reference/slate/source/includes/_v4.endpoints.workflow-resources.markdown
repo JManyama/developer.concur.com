@@ -71,7 +71,7 @@ This comment is visible wherever Request comments are available to the employee,
 
 ### HTTP Response
 
-#### HTTP Status Codes
+#### v4 Endpoints Workflow - HTTP Status Codes
 
 To learn more about response HTTP status codes for this API see [Travel Request v4 - HTTP Status Codes](#request-v4-http-status-codes).
 

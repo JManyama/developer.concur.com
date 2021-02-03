@@ -49,7 +49,7 @@ None.
 
 ### HTTP Response
 
-#### HTTP Status Codes
+#### v4 Cash Advance - HTTP Status Codes
 
 To learn more about response HTTP status codes for this API see [Travel Request v4 - HTTP Status Codes](#request-v4-http-status-codes).
 
