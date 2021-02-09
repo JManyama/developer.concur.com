@@ -131,6 +131,19 @@ includes:
   - v1.notification-company-resource
   - v3.request
   - trip-approval-resource
+  - v2.expense-entry-attendee
+  - v1dot1.expense-group-configurations
+  - v1dot1.reports
+  - hotel-direct-connect-codes
+  - post-availability-search
+  - post-booking-rule-search
+  - post-hotel-search
+  - post-new-reservation
+  - post-reservation-cancellation
+  - post-reservation-query
+  - post-reservation-update
+  - hotel
+  
 
 
   
