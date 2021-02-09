@@ -65,7 +65,7 @@ This callout can also be used to perform the following functions:
 * Modify the Hotel Reservation
 * Cancel the Hotel Reservation
 
-## Hotel URL Structure
+### Hotel URL Structure
 
 The hotel direct connect sends the relevant information to a URL that the travel supplier maintains.
 
