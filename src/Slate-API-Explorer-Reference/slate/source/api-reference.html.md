@@ -121,19 +121,14 @@ includes:
   - authorization-pre-2017
   - v1dot1.expense-itemization
   - v1dot1.expense-entry
-  - v1dot1.report-full-details
-  - v2.reports
-  - v1dot1.reports-list
-  - v1.user
-  - v1.getting-started
-  - v1dot1.locations
-  - v1.notification-user-resource
-  - v1.notification-company-resource
-  - v3.request
-  - trip-approval-resource
   - v2.expense-entry-attendee
   - v1dot1.expense-group-configurations
   - v1dot1.reports
+  - v1dot1.reports-list
+  - v1dot1.report-full-details
+  - v1dot1.locations
+  - v2.reports
+  - hotel
   - hotel-direct-connect-codes
   - post-availability-search
   - post-booking-rule-search
@@ -142,7 +137,20 @@ includes:
   - post-reservation-cancellation
   - post-reservation-query
   - post-reservation-update
-  - hotel
+  - v1.list-item
+  - v1.list-resource
+  - v1.list-resource-get
+  - v3.receipts
+  - v3.request
+  - v1.notification-user-resource
+  - v1.notification-company-resource
+  - v1.user
+  - v1.getting-started
+  - v1.profile-resource
+  - trip-approval-resource
+  - custom-list-items
+  
+  
   
 
 
